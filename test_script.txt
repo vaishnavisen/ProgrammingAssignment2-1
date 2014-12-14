@@ -1,0 +1,17 @@
+# Create unimodular integer matrices - inverse is also an integer matrix
+vec1 <- c(5, 8, 3, 5) 
+vec2 <- c(1, 3, 1, 4)
+m1 <- matrix(vec1, 2, byrow = TRUE)
+m2 <- matrix(vec2, 2, byrow = TRUE)
+
+# Make cacheMatrix objects
+cm1 <- makeCacheMatrix(m1)
+cm2 <- makeCacheMatrix(m2)
+
+# Run initial computation
+m1i <- cacheSolve(cm1)
+m2i <- cacheSolve(cm2)
+
+# Retrieve inverse from cache
+cacheSolve(cm1)
+cacheSolve(cm2)
